@@ -1,0 +1,15 @@
+.logo-container {
+  $padding-bottom: $sidebar-max-width / 4;
+  $padding-top: $padding-bottom / 2;
+
+  background-color: tan;
+  padding: $padding-top 0 $padding-bottom 0;
+  -webkit-clip-path: polygon(0% 0%, 100% 0%, 100% 70%, 0 100%);
+  clip-path: polygon(0% 0%, 100% 0%, 100% 70%, 0 100%);
+
+  > img {
+    padding: 0;
+    display: block;
+    margin: 0 auto;
+  }
+}
