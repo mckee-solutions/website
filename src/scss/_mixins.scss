@@ -1,0 +1,31 @@
+@mixin sm-screen {
+  @media screen and (min-width: $ms-breakpoint-sm) {
+    @content;
+  }
+}
+@mixin md-screen {
+  @media screen and (min-width: $ms-breakpoint-md) {
+    @content;
+  }
+}
+@mixin lg-screen {
+  @media screen and (min-width: $ms-breakpoint-lg) {
+    @content;
+  }
+}
+@mixin top-bar-padding {
+  $padding-factor: 2.6;
+
+  @include sm-screen {
+    display: block;
+    padding-top:$logo-height-sm * $padding-factor;
+  }
+
+  @include md-screen {
+    padding-top:$logo-height-md * $padding-factor;
+  }
+
+  @include lg-screen {
+    padding-top:$logo-height-lg * $padding-factor;
+  }
+}

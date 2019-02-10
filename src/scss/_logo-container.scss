@@ -1,28 +1,40 @@
-.logo-container {
-  $padding-bottom: $sidebar-max-width / 4;
+@mixin responsive-logo($img-size) {
+  $margin: $img-size / 3;
 
+  padding-bottom: $img-size;
+  -webkit-clip-path: polygon(0% 0%, 100% 0%, 100% 20%, 0 100%);
+  clip-path: polygon(0% 0%, 100% 0%, 100%  20%, 0 100%);
+
+  > img {
+    margin: $margin 0 0 $margin;
+    height: $img-size;
+  }
+}
+
+.logo-container {
   background-color: #fdf6e2;
-  padding-bottom: $padding-bottom;
   position: absolute;
   top: 0;
   left: 0;
   width: 100vw;
   z-index: 999;
 
-  -webkit-clip-path: polygon(0% 0%, 100% 0%, 100% 20%, 0 100%);
-  clip-path: polygon(0% 0%, 100% 0%, 100%  20%, 0 100%);
-
-  @media screen and (min-width:$ms-breakpoint-lg) {
-    -webkit-clip-path: polygon(0% 0%, 100% 0%, 100% -10%, 0 100%);
-    clip-path: polygon(0% 0%, 100% 0%, 100%  -10%, 0 100%);
-  }
-
-
   > img {
-    $margin: $padding-bottom / 2;
-
     padding: 0;
     display: block;
-    margin: $margin 0 0 $margin;
+  }
+
+  @include responsive-logo($logo-height-xs);
+
+  @include sm-screen {
+    @include responsive-logo($logo-height-sm);
+  }
+
+  @include md-screen {
+    @include responsive-logo($logo-height-md);
+  }
+
+  @include lg-screen {
+    @include responsive-logo($logo-height-lg);
   }
 }

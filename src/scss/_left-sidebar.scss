@@ -1,7 +1,12 @@
 app-left-sidebar {
-  max-width: $sidebar-max-width;
+  width: 400px;
   background-color: #eaeaea;
-  flex-grow: 1;
   overflow: visible;
   position: relative;
+
+  /* TODO make this work as an off-canvas */
+  display: none;
+
+  @include top-bar-padding;
+
 }
