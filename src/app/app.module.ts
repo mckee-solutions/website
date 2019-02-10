@@ -8,18 +8,18 @@ import {LogoComponent} from './components/logo/logo.component';
 import {PageAboutComponent} from './components/pages/about/page-about.component';
 
 @NgModule({
-    declarations: [
-        RootComponent,
-        LogoComponent,
-        LeftSidebarComponent,
-        PageAboutComponent
-    ],
-    imports: [
-        BrowserModule,
-        AppRoutingModule
-    ],
-    providers: [],
-    bootstrap: [RootComponent]
+  declarations: [
+    RootComponent,
+    LogoComponent,
+    LeftSidebarComponent,
+    PageAboutComponent
+  ],
+  imports: [
+    BrowserModule,
+    AppRoutingModule
+  ],
+  providers: [],
+  bootstrap: [RootComponent]
 })
 export class AppModule {
 }

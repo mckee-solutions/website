@@ -7,6 +7,10 @@ app-left-sidebar {
   /* TODO make this work as an off-canvas */
   display: none;
 
+  @include sm-screen {
+    display: block;
+  }
+
   @include top-bar-padding;
 
 }
