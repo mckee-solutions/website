@@ -3,7 +3,9 @@ import {Routes, RouterModule} from '@angular/router';
 import {PageAboutComponent} from './components/pages/about/page-about.component';
 
 const routes: Routes = [
-  {path: '', component: PageAboutComponent}
+  {path: 'about', component: PageAboutComponent},
+  {path: 'crux', component: PageAboutComponent},
+  {path: '', redirectTo: '/about', pathMatch: 'full'}
 ];
 
 @NgModule({
