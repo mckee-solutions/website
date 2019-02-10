@@ -3,7 +3,9 @@
   height: 100vh;
 }
 
-router-outlet {
+.ms-body-wrapper {
   flex-grow: 1;
   @include top-bar-padding;
+  padding-left: 40px;
+  padding-right: 40px;
 }
