@@ -14,7 +14,12 @@ $logo-height-sm: 60px;
 $logo-height-md: 80px;
 $logo-height-lg: 120px;
 
+$sidebar-width: 260px;
+
 /* fonts */
 $font-family-base: 'EB Garamond', serif;
 $font-family-title: 'Saira Extra Condensed', sans-serif;
 $font-family-monospace: 'Inconsolata', monospace;
+
+/* utilities */
+$corner-margin-factor: 3;

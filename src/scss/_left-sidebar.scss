@@ -1,14 +1,12 @@
 app-left-sidebar {
-  width: 400px;
+  position: absolute;
+  width: $sidebar-width;
   background-color: #eaeaea;
   overflow: visible;
-  position: relative;
-
-  /* TODO make this work as an off-canvas */
-  display: none;
+  min-height: 100%;
 
   @include sm-screen {
-    display: block;
+
   }
 
   @include top-bar-padding;
@@ -36,5 +34,4 @@ app-left-sidebar {
       }
     }
   }
-
 }

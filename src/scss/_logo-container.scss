@@ -1,5 +1,5 @@
 @mixin responsive-logo($img-size) {
-  $margin: $img-size / 3;
+  $margin: $img-size / $corner-margin-factor;
 
   padding-bottom: $img-size;
   -webkit-clip-path: polygon(0% 0%, 100% 0%, 100% 20%, 0 100%);
@@ -17,7 +17,7 @@
   top: 0;
   left: 0;
   width: 100vw;
-  z-index: 999;
+  z-index: 98;
 
   > img {
     padding: 0;

@@ -1,0 +1,9 @@
+.ms-menu-button {
+  background-color: red;
+  height: 50px;
+  width: 50px;
+  position: absolute;
+  z-index: 99;
+  right: $logo-height-xs / $corner-margin-factor;
+  top: $logo-height-xs / $corner-margin-factor;
+}

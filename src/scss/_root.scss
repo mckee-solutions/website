@@ -4,8 +4,16 @@
 }
 
 .ms-body-wrapper {
-  flex-grow: 1;
+  flex: 1;
   @include top-bar-padding;
   padding-left: 40px;
   padding-right: 40px;
+  margin-left: 0;
+  transition: margin 0.5s;
+  background: white;
+  z-index: 50;
+
+  @include sm-screen {
+    margin-left: $sidebar-width;
+  }
 }
