@@ -1,6 +1,10 @@
 .ms-flex-container {
   display: flex;
   min-height: 100vh;
+
+  &.menu-open .ms-body-wrapper {
+    margin-left: $sidebar-width;
+  }
 }
 
 .ms-body-wrapper {

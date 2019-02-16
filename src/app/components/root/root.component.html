@@ -1,8 +1,8 @@
 <app-logo></app-logo>
-<div class="ms-menu-button">
-
-</div>
-<div class="ms-flex-container">
+<button class="ms-menu-button" (click)="menuOpen = !menuOpen">
+  <fa-icon [icon]="['fas', 'bars']"></fa-icon>
+</button>
+<div class="ms-flex-container" [class.menu-open]="menuOpen">
   <app-left-sidebar></app-left-sidebar>
   <div class="ms-body-wrapper">
     <router-outlet></router-outlet>
