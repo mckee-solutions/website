@@ -1,5 +1,5 @@
 import {NgModule} from '@angular/core';
-import {Routes, RouterModule} from '@angular/router';
+import {RouterModule, Routes} from '@angular/router';
 import {PageAboutComponent} from './components/pages/about/page-about.component';
 
 const routes: Routes = [

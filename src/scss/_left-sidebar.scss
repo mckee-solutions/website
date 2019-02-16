@@ -16,18 +16,21 @@ app-left-sidebar {
   nav {
     ul {
       list-style: none;
-      padding:0;
-      margin:0;
+      padding: 0;
+      margin: 0;
+
       li {
-        padding:0;
-        margin:0;
-        overflow:hidden;
+        padding: 0;
+        margin: 0;
+        overflow: hidden;
+
         a {
-          display:block;
+          display: block;
           padding: 40px;
           color: $ms-logo-primary;
           text-decoration: none;
           text-align: center;
+
           &:hover {
             background-color: $ms-logo-primary;
             color: white;
