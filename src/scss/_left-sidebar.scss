@@ -3,7 +3,8 @@ app-left-sidebar {
   width: $sidebar-width;
   background-color: #eaeaea;
   overflow: visible;
-  min-height: 100%;
+  min-height: 100vh;
+  height: 100%;
 
   @include sm-screen {
 

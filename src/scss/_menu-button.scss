@@ -10,6 +10,7 @@
   color: $ms-logo-primary;
   font-size: 1.5rem;
   cursor: pointer;
+  outline: none;
 
   @include sm-screen {
     display: none;
