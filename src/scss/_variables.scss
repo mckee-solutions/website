@@ -2,6 +2,7 @@
 $ms-logo-primary: #102a8a;
 $ms-logo-secondary: #7e7e7e;
 $ms-header-bar: #fdf6e2;
+$ms-sidebar-bg: #eaeaea;
 
 /* breakpoints */
 $ms-breakpoint-sm: 768px;
@@ -12,7 +13,7 @@ $ms-breakpoint-lg: 1500px;
 $logo-height-xs: 40px;
 $logo-height-sm: 60px;
 $logo-height-md: 80px;
-$logo-height-lg: 120px;
+$logo-height-lg: $logo-height-md;
 
 $sidebar-width: 260px;
 

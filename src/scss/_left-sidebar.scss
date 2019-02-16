@@ -1,7 +1,8 @@
 app-left-sidebar {
   position: absolute;
   width: $sidebar-width;
-  background-color: #eaeaea;
+  background-color: $ms-sidebar-bg;
+  border-right: solid 1px darken($ms-sidebar-bg, 3%);
   overflow: visible;
   min-height: 100vh;
   height: 100%;
