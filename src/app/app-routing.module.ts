@@ -1,10 +1,10 @@
 import {NgModule} from '@angular/core';
 import {RouterModule, Routes} from '@angular/router';
-import {PageAboutComponent} from './components/pages/about/page-about.component';
+import {PageComponent} from './components/page/page.component';
 
 const routes: Routes = [
-  {path: 'about', component: PageAboutComponent},
-  {path: 'crux', component: PageAboutComponent},
+  {path: 'about', component: PageComponent},
+  {path: 'crux', component: PageComponent},
   {path: '', redirectTo: '/about', pathMatch: 'full'}
 ];
 
