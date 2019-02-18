@@ -11,6 +11,12 @@ export class PageService {
   }
 
   getPageForPath(path: string): Observable<string> {
+    if (path.startsWith('/')) {
+      path = '/pages' + path;
+    }
+    if (!path.endsWith('.html')) {
+      path = path + '.html';
+    }
     return this.http.get(path, {responseType: 'text'});
   }
 }

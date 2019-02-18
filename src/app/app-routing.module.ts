@@ -3,6 +3,7 @@ import {RouterModule, Routes} from '@angular/router';
 import {PageComponent} from './components/page/page.component';
 
 const routes: Routes = [
+  {path: '', redirectTo: '/about', pathMatch: 'full'},
   {path: '**', component: PageComponent}
 ];
 

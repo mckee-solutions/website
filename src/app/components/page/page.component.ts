@@ -16,7 +16,9 @@ export class PageComponent implements OnInit {
   ngOnInit(): void {
     this.router.events.subscribe(event => {
       if (event instanceof NavigationEnd) {
-        console.log(event.url);
+        this.pageService.getPageForPath(event.urlAfterRedirects).subscribe(pageData => {
+          this.pageData = pageData;
+        });
       }
     });
   }
