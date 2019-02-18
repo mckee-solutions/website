@@ -1,5 +1,6 @@
 import {Component, OnInit} from '@angular/core';
-import {HttpClient} from '@angular/common/http';
+import {PageService} from '../../services/page.service';
+import {NavigationEnd, Router} from '@angular/router';
 
 @Component({
   selector: 'app-page',
@@ -8,12 +9,15 @@ import {HttpClient} from '@angular/common/http';
 export class PageComponent implements OnInit {
   pageData: string;
 
-  constructor(private http: HttpClient) {
+  constructor(private pageService: PageService,
+              private router: Router) {
   }
 
   ngOnInit(): void {
-    this.http.get('pages/about.html', {responseType: 'text'}).subscribe(htmlData => {
-      this.pageData = htmlData;
+    this.router.events.subscribe(event => {
+      if (event instanceof NavigationEnd) {
+        console.log(event.url);
+      }
     });
   }
 

@@ -1,23 +1,47 @@
 const matter = require("gray-matter");
 const marked = require("marked");
+const path = require('path');
 const fs = require('fs');
 
+// ##########################################################################
+// ##########################################################################
+// ##########################################################################
 const ANGULAR_CONFIG = "angular.json";
-
 const angular = JSON.parse(fs.readFileSync(ANGULAR_CONFIG));
 const OUTPUT_ROOT = angular.projects[angular.defaultProject].sourceRoot;
 const OUTPUT_DIR = `${OUTPUT_ROOT}/pages`;
 
-if (!fs.existsSync(OUTPUT_DIR)){
-  fs.mkdirSync(OUTPUT_DIR, {recursive:true});
+// ##########################################################################
+// ##########################################################################
+// ##########################################################################
+function clean() {
+  if (fs.existsSync(OUTPUT_DIR)) {
+    fs.rmdirSync(OUTPUT_DIR);
+  }
 }
 
-const mdFileContents = fs.readFileSync("pages/about.md");
-const matterParsed = matter(mdFileContents);
+// ##########################################################################
+// ##########################################################################
+// ##########################################################################
+function recursiveParseMarkdown(filePath) {
+  const stats = fs.statSync(filePath);
+  if (stats.isDirectory()) {
+    const filesList = fs.readdirSync(filePath);
+    fs.mkdirSync(OUTPUT_DIR + path.sep + filePath, {recursive: true});
+    for (let f of filesList) {
+      recursiveParseMarkdown(filePath + path.sep + f);
+    }
+  } else if (stats.isFile() && /\.md$/.test(filePath)) {
+    const mdFileContents = fs.readFileSync(filePath);
+    const parsedPath = path.parse(filePath);
+    const matterParsed = matter(mdFileContents);
+    const pageHtml = marked(matterParsed.content);
 
-// use matterParsed to build indexes
-
-if (matterParsed.content) {
-  fs.writeFileSync(`${OUTPUT_DIR}/about.html`, marked(matterParsed.content));
+  }
 }
 
+// ##########################################################################
+// ##########################################################################
+// ##########################################################################
+clean();
+recursiveParseMarkdown("pages");

@@ -25,6 +25,7 @@
     "rfs": "^7.1.9",
     "rxjs": "~6.3.3",
     "tslib": "^1.9.0",
+    "urijs": "^1.19.1",
     "zone.js": "~0.8.26"
   },
   "devDependencies": {

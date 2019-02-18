@@ -1,7 +1,7 @@
 ---
-title: About McKee Solutions
-slug: about
+title: About
 ---
+
 # About McKee Solutions
 
 Here is some text
