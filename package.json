@@ -21,6 +21,7 @@
     "@fortawesome/fontawesome-svg-core": "^1.2.15",
     "@fortawesome/free-solid-svg-icons": "^5.7.2",
     "core-js": "^2.5.4",
+    "lodash": "^4.17.11",
     "normalize.css": "^8.0.1",
     "rfs": "^7.1.9",
     "rxjs": "~6.3.3",

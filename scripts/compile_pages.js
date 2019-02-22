@@ -3,6 +3,7 @@ const marked = require("marked");
 const path = require('path');
 const fs = require('fs');
 const del = require('del');
+const _ = require('lodash');
 
 // ##########################################################################
 // ##########################################################################
@@ -10,7 +11,7 @@ const del = require('del');
 const ANGULAR_CONFIG = "angular.json";
 const angular = JSON.parse(fs.readFileSync(ANGULAR_CONFIG));
 const OUTPUT_ROOT = angular.projects[angular.defaultProject].sourceRoot;
-const OUTPUT_DIR = `${OUTPUT_ROOT}/pages`;
+const OUTPUT_DIR = `${OUTPUT_ROOT}/app/components/pages`;
 
 // ##########################################################################
 // ##########################################################################
@@ -37,7 +38,19 @@ function recursiveParseMarkdown(filePath) {
     const parsedPath = path.parse(filePath);
     const matterParsed = matter(mdFileContents);
     const pageHtml = marked(matterParsed.content);
-    fs.writeFileSync(path.join(OUTPUT_ROOT, parsedPath.dir, parsedPath.name) + '.html', pageHtml);
+
+    // write component file
+    const componentTemplate = fs.readFileSync('./scripts/component_template.tstemplate');
+    let componentOutput = _.replace(componentTemplate, 'GNR8D_HTML_ESCAPED', _.replace(pageHtml, '`', '\`'));
+    console.log('----------------------------');
+    console.log('----------------------------');
+    console.log('----------------------------');
+    console.log(componentOutput)
+
+    // write imports in routes file
+    // write routes in routes file
+    // write imports in module file
+    // write components in module file
   }
 }
 
