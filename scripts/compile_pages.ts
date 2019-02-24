@@ -14,7 +14,7 @@ class ComponentListing {
 }
 
 const renderer = new marked.Renderer();
-const normalLinkRenderer = renderer.link;
+const normalLinkRenderer = renderer.link.bind(renderer);
 renderer.link = (href, title, text) => {
   if (!href || /^(?:[a-z]+:)?\/\//i.test(href)) {
     return normalLinkRenderer(href, title, text);
@@ -60,7 +60,7 @@ function recursiveParseMarkdown(filePath) {
     const mdFileContents = fs.readFileSync(filePath);
     const parsedPath = path.parse(filePath);
     const matterParsed = matter(mdFileContents);
-    const pageHtml = marked(matterParsed.content);
+    const pageHtml = marked(matterParsed.content, {renderer: renderer});
     let pathPagesRemoved = _.kebabCase(`${parsedPath.dir}${path.sep}${parsedPath.name}`);
     pathPagesRemoved = _.replace(pathPagesRemoved, /^pages-/i, '');
     const componentClassName = 'Page' + _.upperFirst(_.camelCase(pathPagesRemoved)) + 'Component';

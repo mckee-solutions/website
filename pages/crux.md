@@ -1,6 +1,6 @@
 ---
 title: CRUX
 ---
-# CRUX Home
+![CRUX Logo](/assets/images/crux-logo.svg "CRUd for XML")
 
-some text about crux
+[v0.1](/crux-spec-0-1)
