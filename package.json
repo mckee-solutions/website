@@ -4,8 +4,8 @@
   "scripts": {
     "ng": "ng",
     "compile_pages": "ts-node -P tsconfig.scripts.json ./scripts/compile_pages.ts",
-    "start": "node scripts/compile_pages.js && ng serve",
-    "build": "node scripts/compile_pages.js && ng build --prod"
+    "start": "npm run compile_pages && ng serve",
+    "build": "npm run compile_pages && ng build --prod"
   },
   "private": true,
   "dependencies": {
