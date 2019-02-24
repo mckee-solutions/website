@@ -4,7 +4,9 @@
 /dist
 /tmp
 /out-tsc
-/src/pages
+/src/app/components/pages
+/src/app/app-routing.module.ts
+/src/app/app.module.ts
 
 # dependencies
 /node_modules
