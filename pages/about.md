@@ -21,7 +21,8 @@ Framework web application. I have ventured into Kotlin, and absolutely
 love it. I also have lots of experience with PHP (mostly customizing
 WordPress), Groovy, and Python.
 
-<a href="https://stackoverflow.com/users/493807/andy">
-<img src="https://stackoverflow.com/users/flair/493807.png?theme=clean" width="208" height="58" alt="profile for Andy at Stack Overflow, Q&amp;A for professional and enthusiast programmers" title="profile for Andy at Stack Overflow, Q&amp;A for professional and enthusiast programmers">
+<a href="https://stackoverflow.com/users/493807/andy" target="_blank">
+<img src="https://stackoverflow.com/users/flair/493807.png?theme=clean"
+width="208" height="58" alt="Andy's Stack Overflow profile" title="Andy's Stack Overflow profile">
 </a>
 
